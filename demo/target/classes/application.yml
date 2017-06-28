@@ -1,0 +1,30 @@
+spring:
+  c3p0:
+    driverClass: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://192.168.0.233:3306/test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    user: root
+    password: 123456789
+    acquireIncrement: 1
+    initialPoolSize: 2
+    maxIdleTime: 2
+    maxPoolSize: 2
+    minPoolSize: 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    acquireRetryDelay: 1000
+    acquireRetryAttempts: 60
+    minPoolSizebreakAfterAcquireFailure: false
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+# JPA (JpaBaseConfiguration, HibernateJpaAutoConfiguration)
+spring.data.jpa.repositories.enabled: true
+spring.jpa.generate-ddl: true
+spring.jpa.properties.hibernate.show_sql: true
+spring.jpa.database: MYSQL
+spring.jpa.show-sql: true
+spring.jpa.open-in-view: true
+spring.jpa.hibernate.naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.hibernate.ddl-auto: update
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+
+logging:
+  level:
+    com.zhidian.mam: debug
